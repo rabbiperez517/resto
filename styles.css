@@ -22,15 +22,34 @@ img {
 
 .container{
     display: flex;
-    width:100%;
+    align-items: center;
+    justify-content: space-between;
+    width:800px;
 }
 
 .container div{
     flex-grow: 1;
-    transition: flex 0.5s ease;
-    min-width:100px;
+   overflow:hidden;
+   display:grid;
+   place-items: center;
+   color: white;
+   height:300px;
+   aspect-ratio :0.5;
+   transition: all 0.5s ease-in-out;
+   padding: 1rem;
+   cursor: pointer
+}
+
+.container div image {
+    border-radius: 1rem;
+    grid-column: 1;
+    grid-row: 1/span 3;
+    width:100px;
+    height:300px;
+    object-fit:cover;
+
 }
 
 .container div:hover{
-    flex-grow:5;
+    flex-grow:10;
 }
